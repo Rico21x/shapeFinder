@@ -14,8 +14,9 @@ class Shape3D:
 class Cuboid(Shape3D):
     def __init__(self, length: float, width: float, height: float):
         self.length = length
+          self.height = height
         self.width = width
-        self.height = height
+      
 
     def GetVolume(self) -> float:
         return self.length * self.width * self.height
@@ -62,16 +63,3 @@ class Sphere(Shape3D):
     def GetVolume(self) -> float:
         return (4/3) * math.pi * math.pow(self.radius, 3)
     
-
-class Prism(Shape3D):
-    def __init__(self, side_length, faces, height):
-        self.polybase = Polygon(side_length, faces)
-        self.height = height
-        self.area = (self.polybase.GetArea() * 2) + (self.polybase.GetPerimeter() * self.height)
-        self.volume = self.polybase.GetArea() * self.height
-
-    def GetSurfaceArea(self) -> float:
-        return self.area
-
-    def GetVolume(self) -> float:
-        return self.volume
