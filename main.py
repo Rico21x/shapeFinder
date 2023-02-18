@@ -1,12 +1,12 @@
 import sys
-from Shapes3D import Shape3D, Cube, Cuboid, Cylinder, Sphere, Prism
+from Shapes3D import Shape3D, Cube, Cuboid, Cylinder, Sphere, 
 
 def solve():
     total = 0
     shape_list = []
 
     if len(sys.argv) < 2:
-        print("Please give the name of the data file as an argument in the terminal.")
+        print("What is the name of the file in your terminal")
         return
     filename = sys.argv[1]
 
@@ -49,7 +49,7 @@ def solve():
 
             shape_list.append(my_shape)
 
-    print(f"The sum of your measurements is {total:.2f}")
+    print(f"The sum of the measurements are {total:.2f}")
 
 if __name__ == "__main__":
     solve()
