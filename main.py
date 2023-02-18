@@ -34,12 +34,6 @@ def solve():
                 my_shape = Sphere(
                     float(line_data[1])
                 )
-            elif line_data[0] == "prism":
-                my_shape = Prism(
-                    float(line_data[1]),
-                    int(line_data[2]),
-                    float(line_data[3])
-                )
             elif line_data[0] == "area":
                 for shape in shape_list:
                     total += shape.GetSurfaceArea() * float(line_data[1])
