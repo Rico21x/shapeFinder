@@ -45,7 +45,7 @@ def solve():
                 shape_list.clear()
                 continue
             else:
-                raise ValueError(f"Unable to parse shape from name '{line_data[0]}'")
+                raise ValueError(f"Unable to parse shape data '{line_data[0]}'")
 
             shape_list.append(my_shape)
 
